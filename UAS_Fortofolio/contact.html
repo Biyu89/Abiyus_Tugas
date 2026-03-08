@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Adib Abiyu Sakhi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio<span>.</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="portfolio.html">Portofolio Karya</a></li>
+                <li><a href="contact.html" class="active-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form onsubmit="validateForm(event)">
+                <input type="text" id="nama" placeholder="Nama Lengkap">
+                <input type="email" id="email" placeholder="Email Anda">
+                <input type="text" id="subjek" placeholder="Subjek">
+                <textarea id="pesan" rows="5" placeholder="Pesan Anda"></textarea>
+                <button type="submit" id="btnKirim" 
+                        onmouseover="addHoverEffect(this)" 
+                        onmouseout="removeHoverEffect(this)" 
+                        onclick="changeButtonText(this)">Kirim</button>
+            </form>
+        </div>
+    </main>
+    <footer id="main-footer"><p>&copy; 2025 Adib Abiyu Sakhi</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

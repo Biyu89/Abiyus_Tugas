@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- 1. RESET MANUAL (Tanpa Bintang) --- */
+html, body, header, nav, main, footer, div, h1, h2, h3, p, ul, li, form, input, textarea, section, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body { 
+    background-color: #ffffff; 
+    color: #f32c09; 
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- 2. NAVIGASI (Flexbox) --- */
+header { 
+    background: #ffffff; 
+    padding: 20px 10%; 
+    border-bottom: 2px solid #f4f4f4; 
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { font-size: 24px; font-weight: 700; color: #001f3f; }
+.logo span { color: #0074D9; }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { text-decoration: none; color: #001f3f; font-weight: 500; }
+
+/* Link Aktif via Class */
+nav ul li a.active-link { 
+    color: #0074D9 !important; 
+    font-weight: bold;
+    border-bottom: 2px solid #0074D9; 
+    padding-bottom: 5px;
+}
+
+/* --- 3. LAYOUT GLOBAL (Home & About) --- */
+.home-container, .about-main, .portfolio-main { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 80px 10%; 
+    gap: 50px; 
+    flex: 1;
+}
+
+.home-photo img, .about-image img, .portfolio-image img { 
+    width: 300px; 
+    border-radius: 20px; 
+    border: 5px solid #001f3f; 
+    box-shadow: 15px 15px 0px rgba(0, 116, 217, 0.1);
+}
+
+.home-info h1, .about-text h1, .portfolio-text h1 { font-size: 3rem; margin-bottom: 10px; }
+.about-text p, .portfolio-text p { text-align: justify; margin-bottom: 15px; }
+
+/* --- 4. GRID PORTFOLIO --- */
+.project-section { padding: 40px 10%; background: #f8f9fa; }
+.project-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+}
+
+.project-card { 
+    background: rgb(236, 236, 236); 
+    border-radius: 15px; 
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.project-card:hover { transform: translateY(-10px); }
+.project-card img { width: 100%; hi: 180px; object-fit: cover; }
+.project-info { padding: 15px; font-weight: bold; color: #010000; }
+
+/* --- 5. CONTACT FORM --- */
+.contact-container {
+    max-width: 500px; 
+    margin: 60px auto; 
+    padding: 30px; 
+    border: 1px solid #eee; 
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    text-align: center;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+}
+
+#btnKirim {
+    background: #001f3f; 
+    color: #fff; 
+    padding: 12px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* --- 6. FOOTER GLOBAL --- */
+#main-footer { 
+    text-align: center; 
+    padding: 25px; 
+    background: #f8f9fa; 
+    border-top: 1px solid #eee; 
+    margin-top: auto; 
+}
+
+/* --- 7. RESPONSIVE --- */
+@media (max-width: 768px) {
+    .home-container, .about-main, .portfolio-main { flex-direction: column; text-align: center; }
+    .project-grid { grid-template-columns: 1fr; }
+}

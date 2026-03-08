@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Portofolio Karya - Adib Abiyu Sakhi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS KHUSUS HALAMAN INI */
+        nav ul li a.active-link { 
+            color: #0074D9 !important; 
+            font-weight: bold; 
+            border-bottom: 2px solid #0074D9; 
+            padding-bottom: 5px; 
+        }
+
+        .portfolio-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            gap: 40px;
+        }
+
+        .portfolio-text { flex: 1; }
+        .portfolio-text h1 { font-size: 3rem; color: #001f3f; margin-bottom: 10px; }
+        
+        .portfolio-image { flex: 1; display: flex; justify-content: flex-end; }
+        .portfolio-image img { 
+            width: 100%; max-width: 300px; 
+            border-radius: 20px; border: 5px solid #001f3f; 
+        }
+
+        /* GRID PROJECT JADI 5 KARTU */
+        .project-section { padding: 40px 10%; background: #f8f9fa; }
+        .project-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom, baris kedua otomatis menyesuaikan */
+            gap: 25px; 
+        }
+
+        .project-card { 
+            background: white; 
+            border-radius: 15px; 
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover { transform: translateY(-10px); }
+
+        .project-card img {
+            width: 100%;
+            height: 180px; 
+            object-fit: cover; 
+            background-color: #eee;
+        }
+
+        .project-info {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #001f3f;
+            font-size: 0.9rem;
+        }
+
+        /* Footer Jarak Pas */
+        #main-footer { 
+            text-align: center; 
+            padding: 25px; 
+            background: #ffffff; 
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+        }
+
+        /* Responsif HP */
+        @media (max-width: 992px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+            .portfolio-main { flex-direction: column; text-align: center; }
+            .portfolio-image { justify-content: center; }
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+    <header>
+        <nav>
+            <div class="logo">Portfolio<span>.</span></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="portfolio.html" class="active-link">Portofolio Karya</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="flex: 1;">
+        <section class="portfolio-main">
+            <div class="portfolio-text">
+                <h1>Karya & Proyek</h1>
+                <p>Halo, saya Adib Abiyu Sakhi. Ini adalah kumpulan proyek desain dan 3D yang telah saya kerjakan dengan dedikasi tinggi.</p>
+            </div>
+            <div class="portfolio-image">
+                <img src="image/sakhi.jpg" alt="Adib Abiyu Sakhi">
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="image/Cuplikan layar 2025-12-17 222230.png" alt="Desain Modeling 3D">
+                    <div class="project-info">Desain Modeling 3D</div>
+                </div>
+
+                <div class="project-card">
+                    <img src="image/Cuplikan layar 2025-12-17 015501.png" alt="Desain Interior 3D">
+                    <div class="project-info">Desain Interior</div>
+                </div>
+
+                <div class="project-card">
+                    <img src="image/Cuplikan layar 2025-12-17 221754.png" alt="Character Design 3D">
+                    <div class="project-info">Character Design</div>
+                </div>
+
+                <div class="project-card">
+                    <img src="image/Gambar WhatsApp 2025-12-17 pukul 22.14.32_701980e3.jpg" alt="Desain Poster Edukasi">
+                    <div class="project-info">Desain Poster Edukasi</div>
+                </div>
+
+                <div class="project-card">
+                    <img src="image/nasi goreng.jpg" alt="Desain Poster UMKM">
+                    <div class="project-info">Desain Poster UMKM</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2025 Adib Abiyu Sakhi</p>
+    </footer>
+</body>
+</html>
